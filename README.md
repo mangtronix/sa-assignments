@@ -1,1 +1,2 @@
-# sa-assignments
+# Assignments for Software Art
+
