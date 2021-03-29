@@ -2,7 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetBackgroundColor(255);
+    ofSetCircleResolution(100);
 }
 
 //--------------------------------------------------------------
@@ -12,12 +13,19 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofDrawCircle(20, 20, 50);
+    ofSetColor(200, 10, 10);
+    ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, 125);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    switch (key) {
+        case 's':
+            ofImage screenImage;
+            screenImage.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
+            screenImage.save("circular.png");
+            break;
+    }
 }
 
 //--------------------------------------------------------------
